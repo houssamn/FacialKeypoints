@@ -13,19 +13,19 @@ class Net(nn.Module):
     def __init__(self):
         super(Net, self).__init__()
         
-        self.conv1 = nn.Conv2d(1, 32, 4)
+        self.conv1 = nn.Conv2d(1, 32, 5)
         
         self.pool = nn.MaxPool2d(2, 2)
-        self.conv2 = nn.Conv2d(32, 64, 3)
-        self.conv3 = nn.Conv2d(64, 128, 2)
-        self.conv4 = nn.Conv2d(128, 256, 1)
+        self.conv2 = nn.Conv2d(32, 64, 4)
+        self.conv3 = nn.Conv2d(64, 128, 3)
+        self.conv4 = nn.Conv2d(128, 256, 2)
         self.drop1 = nn.Dropout(p=0.1)
         self.drop2 = nn.Dropout(p=0.2)
         self.drop3 = nn.Dropout(p=0.3)
         self.drop4 = nn.Dropout(p=0.4)
         self.drop5 = nn.Dropout(p=0.5)
         self.drop6 = nn.Dropout(p=0.6)
-        self.fc1 = nn.Linear(256*13*13, 6000)
+        self.fc1 = nn.Linear(256*12*12, 6000)
         self.fc2 = nn.Linear(6000,1000)
         self.fc3 = nn.Linear(1000, 2*68) # size of output
         
