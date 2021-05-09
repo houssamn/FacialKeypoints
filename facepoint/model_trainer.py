@@ -71,8 +71,3 @@ class ModelTrainer:
         """Save model weights"""
         weights_file = os.path.join(path, model_name)
         torch.save(self.net.state_dict(), weights_file)
-    
-    def load_weights(self, path=MODEL_DIR, model_name=MODEL_NAME):
-        """Load model weights"""
-        weights_file = os.path.join(path, model_name)
-        self.net.load_state_dict(torch.load(filename))

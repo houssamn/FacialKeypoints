@@ -16,20 +16,16 @@ Facial keypoints (also called facial landmarks) are the small magenta dots shown
 
 # Setup & Usage
 
-.... 
+1. Create and configure the Python environment
 
-1. Run the Training Notebook :
+```bash
+conda env create --file facial_keypoint.yml
+conda activate facial_keypoint
+python -m ipykernel install --user --name=facial_keypoint
+```
+2. Run the Training Notebook : [Training Notebook](1_Train.ipynb)
 
-2. Run the Inference Notebook on some of your own images : 
-
-# Architecture
-
-## Model 
-
-
-## Training
-
-## Inference
+3. Inference. Run the model on unseen images : [Inference Notebook](2_Inference.ipynb)
 
 
 LICENSE: This project is licensed under the terms of the MIT license.
