@@ -37,7 +37,7 @@ def visualize_output(test_images, test_outputs, gt_pts=None, batch_size=10):
     """Visualize the output """
     for i in range(batch_size):
         plt.figure(figsize=(20,10))
-        ax = plt.subplot(1, batch_size, i+1)
+        ax = plt.subplot(batch_size, 1, i+1)
 
         # un-transform the image data
         image = test_images[i].data   # get the image from it's wrapper
